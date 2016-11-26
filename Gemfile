@@ -15,6 +15,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+
+gem 'kaminari'
+
+gem 'bootstrap', '~> 4.0.0.alpha5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
