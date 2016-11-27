@@ -1,18 +1,18 @@
+# Product Controller
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
-
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-    @products = Product.order("name").page(params[:page]).per(6)
+    @products = Product.order(:created_at)
+    @products = Product.order('name').page(params[:page]).per(6)
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
   end
 
   # GET /products/new

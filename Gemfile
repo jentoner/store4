@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -18,6 +16,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+
+gem 'carrierwave'
+gem 'mini_magick', '~> 3.5.0'
+# gem 'rmagick', '2.13.2'
+gem 'fog'
+gem 'figaro'
+gem 'unf'
 
 gem 'kaminari'
 

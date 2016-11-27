@@ -22,20 +22,31 @@
     <p class="card-text">Our latest additions:</p>
 
 <% @products.each do |product| %>
-    <div class="col-sm-4">
-      <div class="list-group">
-        <a class="list-group-item active">
-          <%= product.name %>
-        </a>
-        <a href="" class="list-group-item">
+  <div class="col-sm-4">
+    <div class="list-group">
+      <a class="list-group-item">
+        <%= product.name %>
+      </a>
+      <div class="list-group-item">
 
-          <%= product.description %>
+        <%= product.description %>
+
           <div class="thumbnail">
+          <%= image_tag product.image, class: 'card-img-top img-fluid mx-auto d-block aspect' %>
 
-        </div>
-        <p><%= number_to_currency product.price %></p>
-        </a>
-        <%= link_to 'View', product %>
       </div>
+        <p class="pull-right"><%= number_to_currency product.price %>
+        <span class="tag tag-default" ><%= product.category %></p>
+      </div>
+      <%= link_to 'View', product %>
     </div>
+  </div>
 <% end %>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<%= link_to 'New Product', new_product_path %>
+<%= paginate @products %>
